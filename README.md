@@ -1,0 +1,1 @@
+This project implements Long Short-Term Memory (LSTM) and Probabilistic LSTM (PLSTM) models for streamflow forecasting. The LSTM model provides deterministic predictions, while the PLSTM extends this with probabilistic forecasting to quantify uncertainty. Both models use rainfall and previous streamflow observations as inputs to predict future streamflow behavior.
