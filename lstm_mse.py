@@ -88,7 +88,7 @@ def EDLSTM(hours_of_history, hours_to_predict, parameters_included):
   input_1 = Input(shape=(hours_of_history, 1), name='LSTM1_input')
   LSTM1 = LSTM(256, return_sequences=False)(input_1)
   input_2 = Input(shape=((hours_of_history+hours_to_predict), 1), name='LSTM2_input') 
-  LSTM2 = LSTM(256, return_sequences=False, recurrent_dropout=0.20)(input_2)
+  LSTM2 = LSTM(256, return_sequences=False, dropout=0.20)(input_2)
 
   x = concatenate([LSTM1, LSTM2]) 
   x = RepeatVector(hours_to_predict)(x) 
